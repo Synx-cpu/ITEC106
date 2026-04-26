@@ -24,8 +24,14 @@
     <section class="hero container">
       <div class="hero-copy">
         <p class="tag">Travel Blog Project</p>
-        <h2>Places we want to explore</h2><br>
+        <h2>Places we want to explore</h2>
         <p class="intro">A collection of travel stories, photos, and videos from around the world.</p>
+        <div class="hero-badges" aria-label="Project highlights">
+          <span>Gallery</span>
+          <span>Video</span>
+          <span>Audio</span>
+          <span>Responsive</span>
+        </div>
         <a class="btn" href="#stories">Explore Stories</a>
       </div>
 
@@ -52,6 +58,14 @@
                 <img src="./assets/images/peru.png" alt="Misty forest valley" />
             <figcaption>Peru</figcaption>
           </figure>
+          <figure class="slide">
+                <img src="./assets/images/palace.png" alt="Misty forest valley" />
+            <figcaption>The Grand Palace, Thailand</figcaption>
+          </figure>
+          <figure class="slide">
+                <img src="./assets/images/wall.png" alt="Misty forest valley" />
+            <figcaption>Great Wall of China</figcaption>
+          </figure>
         </div>
         <button class="slide-btn next" id="next-slide" aria-label="Next slide">&#10095;</button>
         <div class="dots" id="dots" aria-label="Slide indicators"></div>
@@ -60,82 +74,114 @@
   </header>
 
   <main>
-    <section class="section container" id="destinations">
-      <h3>Featured Destinations</h3>
-      <div class="destination-grid">
-        <article class="card">
-          <h4>Kyoto, Japan</h4>
-          <p>Temple paths, cherry blossom seasons, and quiet sunrise walks by ancient shrines.</p>
-        </article>
-        <article class="card">
-          <h4>Cancun, Mexico</h4>
-          <p>Celebrated for its breathtaking turquoise waters, pristine beaches, and vibrant nightlife.</p>
-        </article>
-        <article class="card">
-          <h4>Peru</h4>
-          <p>A land of ancient civilizations and breathtaking landscapes, enthralls visitors with its mystical allure.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section gallery-wrap" id="gallery">
-      <div class="container">
-        <h3>Image Gallery</h3>
-        <div class="gallery-grid">
-          <img src="./assets/images/image1.png" alt="Traveler looking over city view" />
-          <img src="./assets/images/image2.png" alt="Road through mountains" />
-          <img src="./assets/images/image3.png" alt="Map and travel planning" />
-          <img src="./assets/images/image4.png" alt="City at night with lights" />
-          <img src="./assets/images/image5.png" alt="Beach and palm trees" />
-          <img src="./assets/images/image6.png" alt="Traveler in old town street" />
+    <div class="container content-shell">
+      <section class="section highlight-strip" aria-label="Travel highlights">
+        <div class="highlight-card">
+          <span>12+</span>
+          <p>Destinations highlighted</p>
         </div>
-      </div>
-    </section>
+        <div class="highlight-card">
+          <span>5</span>
+          <p>Featured gallery images</p>
+        </div>
+        <div class="highlight-card">
+          <span>3</span>
+          <p>Story cards with modal details</p>
+        </div>
+      </section>
 
-    <section class="section container" id="video">
-      <h3>Travel Environment Video</h3>
-      <div class="video-box">
-        <video controls poster="./assets/images/placeholder.png" aria-label="Travel environment video">
-          <source src="./assets/media/video.mp4" type="video/mp4" />
-          Your browser does not support HTML5 video.
-        </video>
-      </div>
-    </section>
+      <div class="content-layout">
+        <div class="primary-column">
+          <section class="section" id="destinations">
+            <h3>Featured Destinations</h3>
+            <p class="section-lead">A few highlights from places that feel unforgettable, even in a snapshot.</p>
+            <div class="destination-grid">
+              <article class="card">
+                <h4>Kyoto, Japan</h4>
+                <p>Temple paths, cherry blossom seasons, and quiet sunrise walks by ancient shrines.</p>
+              </article>
+              <article class="card">
+                <h4>Cancun, Mexico</h4>
+                <p>Celebrated for its breathtaking turquoise waters, pristine beaches, and vibrant nightlife.</p>
+              </article>
+              <article class="card">
+                <h4>Peru</h4>
+                <p>A land of ancient civilizations and breathtaking landscapes, enthralls visitors with its mystical allure.</p>
+              </article>
+            </div>
+          </section>
 
-    <section class="section container" id="stories">
-      <h3>Blog Descriptions</h3>
-      <div class="story-list">
-        <article class="story-card">
-          <h4>Sunrise in Cappadocia</h4>
-          <p>I woke up before dawn and watched balloons float across a pastel sky.</p>
-          <button class="read-more btn-outline" data-modal="The quiet at dawn was unforgettable. As the burners ignited and the balloons rose slowly, the entire valley looked like a moving painting.">Read More</button>
-        </article>
-        <article class="story-card">
-          <h4>Rainy Streets of Lisbon</h4>
-          <p>Even in the rain, every alley had color, fado music, and warm pastries.</p>
-          <button class="read-more btn-outline" data-modal="I spent the afternoon hopping between tram stops and tiny cafes. The rain made the tiled walls shine, and every corner felt cinematic.">Read More</button>
-        </article>
-        <article class="story-card">
-          <h4>Weekend in El Nido</h4>
-          <p>Hidden lagoons, clear waters, and limestone cliffs made every stop incredible.</p>
-          <button class="read-more btn-outline" data-modal="The boat tour led us through narrow passages into bright turquoise water. Snorkeling near coral gardens was the best part of the trip.">Read More</button>
-        </article>
-      </div>
-    </section>
+          <section class="section gallery-wrap" id="gallery">
+            <div class="gallery-inner">
+              <h3>Image Gallery</h3>
+              <p class="section-lead">Five-plus images arranged in a clean grid so the page stays lively on any screen.</p>
+              <div class="gallery-grid">
+                <img src="./assets/images/image1.png" alt="Traveler looking over city view" />
+                <img src="./assets/images/image2.png" alt="Road through mountains" />
+                <img src="./assets/images/image3.png" alt="Map and travel planning" />
+                <img src="./assets/images/image4.png" alt="City at night with lights" />
+                <img src="./assets/images/image5.png" alt="Beach and palm trees" />
+                <img src="./assets/images/image6.png" alt="Traveler in old town street" />
+              </div>
+            </div>
+          </section>
 
-    <section class="section form-area">
-      <div class="container">
-        <h3>Travel Note Signup</h3>
-        <form id="signup-form" novalidate>
-          <div class="form-row">
-            <input type="text" id="name" name="name" placeholder="Your name" required />
-            <input type="email" id="email" name="email" placeholder="Email address" required />
-            <button type="submit" class="btn">Join</button>
-          </div>
-          <p id="form-message" class="form-message" role="alert"></p>
-        </form>
+          <section class="section" id="video">
+            <h3>Travel Environment Video</h3>
+            <div class="video-box">
+              <video controls poster="./assets/images/placeholder.png" aria-label="Travel environment video">
+                <source src="./assets/media/video.mp4" type="video/mp4" />
+                Your browser does not support HTML5 video.
+              </video>
+            </div>
+          </section>
+
+          <section class="section" id="stories">
+            <h3>Blog Descriptions</h3>
+            <p class="section-lead">Short travel notes that open into a simple modal for a cleaner reading experience.</p>
+            <div class="story-list">
+              <article class="story-card">
+                <h4>Sunrise in Cappadocia</h4>
+                <p>I woke up before dawn and watched balloons float across a pastel sky.</p>
+                <button class="read-more btn-outline" data-modal="The quiet at dawn was unforgettable. As the burners ignited and the balloons rose slowly, the entire valley looked like a moving painting.">Read More</button>
+              </article>
+              <article class="story-card">
+                <h4>Rainy Streets of Lisbon</h4>
+                <p>Even in the rain, every alley had color, fado music, and warm pastries.</p>
+                <button class="read-more btn-outline" data-modal="I spent the afternoon hopping between tram stops and tiny cafes. The rain made the tiled walls shine, and every corner felt cinematic.">Read More</button>
+              </article>
+              <article class="story-card">
+                <h4>Weekend in El Nido</h4>
+                <p>Hidden lagoons, clear waters, and limestone cliffs made every stop incredible.</p>
+                <button class="read-more btn-outline" data-modal="The boat tour led us through narrow passages into bright turquoise water. Snorkeling near coral gardens was the best part of the trip.">Read More</button>
+              </article>
+            </div>
+          </section>
+
+          <section class="section form-area">
+            <div class="form-panel">
+              <h3>Travel Note Signup</h3>
+              <p class="section-lead">A small interactive form keeps the page feeling alive without getting complicated.</p>
+              <form id="signup-form" novalidate>
+                <div class="form-row">
+                  <input type="text" id="name" name="name" placeholder="Your name" required />
+                  <input type="email" id="email" name="email" placeholder="Email address" required />
+                  <button type="submit" class="btn">Join</button>
+                </div>
+                <p id="form-message" class="form-message" role="alert"></p>
+              </form>
+            </div>
+          </section>
+        </div>
+
+        <aside class="sidebar">
+          <section class="side-card side-intro">
+            <p class="side-kicker">Wander Journal</p>
+            <h3>Travel that feels calm, rich, and easy to browse.</h3>
+          </section>
+        </aside>
       </div>
-    </section>
+    </div>
   </main>
 
   <button id="music-toggle" class="music-toggle" aria-label="Toggle background music">Play Music</button>

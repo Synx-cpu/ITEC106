@@ -139,3 +139,30 @@ musicToggle.addEventListener('click', async () => {
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+const revealTargets = document.querySelectorAll(
+  '.section, .card, .story-card, .side-card, .gallery-grid img, .video-box, .form-panel'
+);
+
+revealTargets.forEach((element) => {
+  element.classList.add('reveal');
+});
+
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.14,
+    rootMargin: '0px 0px -40px 0px'
+  }
+);
+
+revealTargets.forEach((element) => {
+  revealObserver.observe(element);
+});
