@@ -746,11 +746,28 @@ body::after {
 @media (max-width: 640px) {
   .site-header .nav {
     flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    padding: 0.75rem;
+  }
+
+  .site-header .nav .brand {
+    text-align: center;
+    font-size: 1.4rem;
   }
 
   .site-header .nav .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.4rem;
+    width: 100%;
+  }
+
+  .site-header .nav .nav-links a {
+    display: block;
+    text-align: center;
+    padding: 0.45rem 0.35rem;
+    font-size: 0.86rem;
   }
 
   .hero-badges {
